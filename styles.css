@@ -77,7 +77,7 @@ header .nav__logo__container {
 }
 
 a {
-  color: #fff;
+  color: var(--white);
   text-decoration: none;
 }
 
@@ -140,7 +140,7 @@ header.scroll__sticky .nav__logo__container {
 .nav__main__menu nav li a {
   float: left;
   padding: 5px 11px;
-  color: #fff;
+  color: var(--white);
   font-family: "Roboto";
   font-size: 14px;
   font-weight: 600;
@@ -288,6 +288,19 @@ swiper-container::part(bullet) {
   position: relative;
 }
 
+.carousel__overlay__content h3::after {
+  content: "";
+  background: #ffffff99;
+  height: 1px;
+  position: absolute;
+  width: 50px;
+  left: 50%;
+  top: -20px;
+  margin-left: -25px;
+  font-size: 9px;
+  letter-spacing: 4px;
+}
+
 .carousel__overlay__content h4 {
   font-size: 30px;
   color: var(--white);
@@ -310,7 +323,7 @@ swiper-container::part(bullet) {
   width: 6px;
   height: 6px;
   display: inline-table;
-  background: #fff;
+  background: var(--white);
   margin: 0 auto;
   border-radius: 100%;
 }
@@ -337,7 +350,7 @@ swiper-container::part(bullet) {
   display: inline-block;
   margin-top: 0;
   padding: 14px 20px;
-  border: 1px solid #fff;
+  border: 1px solid var(--white);
   border-color: var(--darker__red);
   background: var(--lighter__red);
   font-weight: 600;
@@ -359,7 +372,7 @@ swiper-container::part(bullet) {
   position: relative;
   float: left;
   width: 100%;
-  background: #fff;
+  background: var(--white);
 }
 
 .story__content__container {
@@ -404,7 +417,7 @@ swiper-container::part(bullet) {
 .story__headings h2 {
   font-size: 30px;
   font-weight: 900;
-  color: #616161;
+  color: var(--headings__grey);
   font-family: "Oswald", cursive;
   text-transform: uppercase;
 }
@@ -422,7 +435,7 @@ swiper-container::part(bullet) {
 
 .hr__dots::after {
   content: "\25CF\25CF\25CF\25CF\25CF\25CF";
-  color: #f94545;
+  color: var(--lighter__red);
   font-size: 7px;
   letter-spacing: 4px;
 }
@@ -438,7 +451,7 @@ swiper-container::part(bullet) {
   line-height: 20px;
   padding-bottom: 10px;
   font-weight: 400;
-  color: #5e646a;
+  color: var(--para__grey);
 }
 
 .story__button {
@@ -557,7 +570,7 @@ swiper-container::part(bullet) {
   left: 0;
   width: 100%;
   height: 100%;
-  background: #000;
+  background: var(--black);
   opacity: 0.6;
   z-index: 3;
 }
@@ -577,7 +590,7 @@ swiper-container::part(bullet) {
 }
 
 .overlay__section__content h1 {
-  color: #f94545;
+  color: var(--lighter__red);
   font-family: "Oswald";
   font-size: 32px;
   font-weight: 800;
@@ -587,7 +600,7 @@ swiper-container::part(bullet) {
   font-family: "Oswald";
   font-size: 40px;
   font-weight: 800;
-  color: #fff;
+  color: var(--white);
 }
 
 .overlay__section__content .second {
@@ -610,5 +623,311 @@ swiper-container::part(bullet) {
 .overlay__section__content h3 {
   font-family: "Oswald";
   font-size: 24px;
+  color: var(--white);
+}
+
+/* Del Forno */
+
+.forno__section {
+  position: relative;
+  float: left;
+  width: 100%;
+  padding: 100px 0;
+  background: var(--white);
+  text-align: center;
+}
+
+.forno__section .forno__content__container {
+  max-width: 1224px;
+  width: 92%;
+  margin: 0 auto;
+  position: relative;
+  z-index: 5;
+  display: flow-root;
+}
+
+.forno__content__container .forno__headings {
+  float: left;
+  width: 100%;
+  position: relative;
+  z-index: 5;
+}
+
+.forno__headings h4 {
+  font-family: "Oswald";
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--headings__grey);
+  padding-bottom: 10px;
+}
+
+.forno__headings h2 {
+  font-family: "Oswald";
+  font-size: 30px;
+  font-weight: 900;
+  color: var(--headings__grey);
+  text-transform: uppercase;
+}
+
+.forno__headings h2 span {
+  color: var(--lighter__red);
+}
+
+.forno__content__container .forno__cards__section {
+  margin-bottom: 30px;
+  z-index: 2;
+  float: left;
+  width: 100%;
+  position: relative;
+}
+
+.forno__cards__section .forno__cards__container {
+  margin: 0 15px;
+}
+
+.forno__cards__container .forno__cards__content__container {
+  width: calc(100% / 3);
+  float: left;
+  position: relative;
+  padding: 0 15px;
+}
+
+.forno__cards__inner__content {
+  width: 100%;
   color: #fff;
+  position: relative;
+  transform-style: preserve-3d;
+  perspective: 1000px;
+  transition: 0.9s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  float: left;
+}
+
+.forno__cards__inner {
+  transform-style: preserve-3d;
+  width: 100%;
+  padding: 150px 30px;
+}
+
+.forno__cards__inner::before  {
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border-color: rgba(255, 255, 255, 0.4);
+  z-index: 10;
+  top: 20px;
+  left: 20px;
+  border-left: 1px dotted;
+  border-top: 1px dotted;
+}
+
+.forno__cards__inner::after {
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border-color: rgba(255, 255, 255, 0.4);
+  z-index: 10;
+  bottom: 20px;
+  right: 20px;
+  border-right: 1px dotted;
+  border-bottom: 1px dotted;
+}
+
+.no-border::before, .no-border::after {
+  border: none !important;
+}
+
+.forno__cards__background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background-size: cover;
+  background-attachment: scroll;
+  background-position: center;
+  background-repeat: repeat;
+  background-origin: content-box;
+}
+
+.card__1 {
+  background-image: url("./Images/pgf-01.jpg");
+}
+
+.card__2 {
+  background-image: url("./Images/pgf-02.jpg");
+}
+
+.card__3 {
+  background-image: url("./Images/pgf-03.jpg");
+}
+
+.fa.fa-pizza::before {
+  content: "\f817";
+}
+
+.forno__cards__inner__content .forno__cards__front{
+  position: relative;
+  transform-style: preserve-3d;
+  transition: 0.9s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  perspective: 1000px;
+  height: 100%;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #292929;
+  cursor: pointer;
+}
+
+.forno__cards__inner a {
+  text-decoration: none;
+  position: relative;
+}
+
+.forno__cards__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--black);
+  opacity: 0.4;
+  z-index: 3;
+}
+
+.forno__cards__overlay__content {
+  align-items: stretch;
+  transform-style: preserve-3d;
+  perspective: 1000px;
+  backface-visibility: hidden;
+  transform: translateZ(95px) scale(0.81);
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+.forno__cards__overlay__content h2 {
+  position: relative;
+  font-size: 22px;
+  font-weight: 800;
+  padding-bottom: 20px;
+  font-family: "Oswald";
+}
+
+.forno__cards__overlay__content h2::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 10px;
+  width: 20px;
+  height: 2px;
+  margin-left: -10px;
+}
+
+.forno__cards__overlay__content h2::after {
+  content: "";
+  position: absolute;
+  top: -30px;
+  margin-left: -25px;
+  left: 50%;
+  width: 50px;
+  height: 2px;
+  background: #c19d60;
+}
+
+.forno__cards__overlay__content h4 {
+  display: inline-block;
+  color: var(--white);
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: 2px;
+  margin: 0 4px;
+}
+
+.forno__cards__inner__content .forno__cards__back {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  transform: rotateY(180deg);
+  transform-style: preserve-3d;
+  transition: 0.9s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  background: var(--headings__grey);
+  perspective: 1000px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.forno__cards__back::after {
+  content: "\25CF\25CF\25CF";
+  position: absolute;
+  left: 50%;
+  bottom: 30px;
+  width: 50px;
+  margin-left: -25px;
+  color: var(--darker__red);
+  font-size: 9px;
+  letter-spacing: 4px;
+}
+
+.forno__cards__back__icon {
+  top: -20px;
+  position: relative;
+  display: inline-table;
+  width: 80px;
+  height: 80px;
+}
+
+.forno__cards__back__icon::before {
+  content: "";
+  position: absolute;
+  width: 60px;
+  height: 10px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.1);
+  left: -15px;
+  top: 12px;
+}
+
+.forno__cards__back__icon i {
+  color: var(--darker__red);
+  z-index: 3;
+  font-size: 54px;
+  font-weight: 300;
+  position: relative;
+}
+
+.forno__cards__back__icon::after {
+  content: "";
+  position: absolute;
+  width: 60px;
+  height: 10px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.1);
+  right: -15px;
+  bottom: 12px;
+}
+
+.forno__cards__back__icon p {
+  color: var(--white);
+  line-height: 20px;
+  padding-bottom: 10px;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+.forno__cards__inner__content:hover .forno__cards__front {
+	transform: rotateY(-180deg);
+}
+.forno__cards__inner__content:hover .forno__cards__back {
+  transform: rotateY(0deg);
+  z-index: 2;
 }
