@@ -209,11 +209,11 @@ header.scroll__sticky .nav__logo__container {
   transition: all 0.2s ease-in-out;
 }
 
-/* .nav__main__menu nav .drop__down:hover  ul {
+.nav__main__menu nav li:hover > ul {
   opacity: 1;
   visibility: visible;
   margin: 0;
-} */
+}
 
 .custom-nav {
   position: absolute;

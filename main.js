@@ -27,3 +27,13 @@ window.addEventListener("scroll", function () {
     header.classList.remove("scroll__sticky");
   }
 });
+
+document.querySelectorAll(".back__to__top").forEach(button => {
+  button.addEventListener("click", function (e) {
+      e.preventDefault();
+      window.scrollTo({
+          top: 0,
+          behavior: "smooth"
+      });
+  });
+});
